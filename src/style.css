@@ -62,28 +62,66 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
+  background-color: var(--accent-bg);
+  border: 2px solid var(--accent-border);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  gap: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.information-card p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-h);
+  margin: 0;
+  line-height: 1.6;
 }
 
 .information-card img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 0.75rem;
+  border: 2px solid var(--accent-border);
+  padding: 0.5rem;
+  background-color: var(--bg);
+  transition: transform 0.2s ease;
+}
+
+.information-card img:hover {
+  transform: scale(1.05);
 }
 
 .information-card button {
-  width: 100%;
-  height: 40px;
-  margin-top: 1rem;
-  background-color: rgba(0, 0, 0, 0.9);
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
+  min-width: 120px;
+  height: 44px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid var(--accent);
   border-radius: 0.5rem;
+  background-color: var(--accent);
+  color: var(--bg);
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .information-card button:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+  color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.information-card button:active {
+  transform: translateY(0);
+}
+
+.buttons-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
 }

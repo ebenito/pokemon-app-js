@@ -21,17 +21,21 @@ export  const PokemonApp = async ( element ) => {
     const pokemonImage = document.createElement('img');
     const nextBtn = document.createElement('button');
     const prevBtn = document.createElement('button');
+    const buttonsContainer = document.createElement('div');
 
 
     //! Configuraciones
     loadingParagraph.textContent = 'Cargando información del Pokemon...';
     nextBtn.textContent = 'Siguiente';
     prevBtn.textContent = 'Anterior';
+    buttonsContainer.className = 'buttons-container';
 
     element.appendChild( loadingParagraph );
     element.appendChild( pokemonImage );
-    element.appendChild( prevBtn );
-    element.appendChild( nextBtn );
+    
+    buttonsContainer.appendChild( prevBtn );
+    buttonsContainer.appendChild( nextBtn );
+    element.appendChild( buttonsContainer );
 
     //! Listeners de los botones
     nextBtn.addEventListener('click', async () => {
